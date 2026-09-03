@@ -1,173 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SKIN.DRINAL - Premium Skincare</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skin.Drinal | Pharmacist-Managed Skincare</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Top Announcement Bars -->
-    <div class="announcement-bar black-bar">
-        Congratulations! You Earned Free Shipping 🎁
-        <span class="close-announcement">&times;</span>
-    </div>
-    <div class="announcement-bar pink-bar">
-        Spend 2700 EGP On Hair Care And Get A Free Gift · Add It To Cart + Code "HAIR"
-    </div>
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <p>Free Shipping on orders over 2500 EGP 🚚✨</p>
+  </div>
 
-    <!-- Main Navigation Header -->
-    <header class="main-header">
-        <button class="menu-btn" onclick="toggleSidebar()">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-        </button>
-        
-        <button class="icon-btn search-btn">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-        </button>
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <button class="nav-toggle" id="openDrawerBtn" aria-label="Open Navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-        <div class="logo">SKIN.DRINAL</div>
-
-        <div class="header-right">
-            <button class="icon-btn account-btn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-            </button>
-            <button class="icon-btn cart-btn" onclick="toggleCart()">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-                <span class="cart-badge" id="cart-count">0</span>
-            </button>
-        </div>
-    </header>
-
-    <!-- Side Category Menu (Drawer) -->
-    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
-    <aside class="sidebar" id="sidebar">
-        <nav class="sidebar-nav">
-            <a href="#" class="sidebar-link">Shop All</a>
-            <a href="#" class="sidebar-link">Shop By Brand</a>
-            <a href="#" class="sidebar-link">Skincare <span class="arrow">›</span></a>
-            <a href="#" class="sidebar-link">Hair Care <span class="arrow">›</span></a>
-            <a href="#" class="sidebar-link">Body Care <span class="arrow">›</span></a>
-            <a href="#" class="sidebar-link">Makeup <span class="arrow">›</span></a>
-            <a href="#" class="sidebar-link">Supplements <span class="arrow">›</span></a>
-            <a href="#" class="sidebar-link">Fragrances <span class="arrow">›</span></a>
-            <a href="#" class="sidebar-link">Tools & Accessories <span class="arrow">›</span></a>
-            <div class="sidebar-divider"></div>
-            <a href="#" class="sidebar-link wishlist-link">♡ Wishlist</a>
-        </nav>
-    </aside>
-
-    <!-- Hero Banner Section -->
-    <section class="hero-banner">
-        <div class="hero-image-container">
-            <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=1000&q=80" alt="Centella Serum Banner">
-        </div>
-    </section>
-
-    <!-- Section: Best Sellers -->
-    <section class="products-section">
-        <div class="section-header">
-            <h2>Check Our Best Sellers!</h2>
-            <a href="#" class="show-all">Show All</a>
-        </div>
-
-        <div class="products-grid">
-            <!-- Product 1 -->
-            <div class="product-card">
-                <div class="card-image-box">
-                    <span class="badge sale-badge">Sale 9%</span>
-                    <div class="card-actions">
-                        <button class="action-btn" title="Wishlist">♡</button>
-                        <button class="action-btn" title="Add to Cart" onclick="addToCart('TIRTIR - Ceramic Milk Ampoule', 695)">🛒</button>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1608248597261-e4d09165811a?auto=format&fit=crop&w=500&q=80" alt="Product">
-                </div>
-                <div class="card-info">
-                    <p class="size-tag">SIZE: 30 ML / 10 ML</p>
-                    <h3 class="product-title">TIRTIR - Ceramic Milk Ampoule</h3>
-                    <div class="price-box">
-                        <span class="price-label">From</span>
-                        <span class="current-price">LE 695</span>
-                        <span class="old-price">LE 855</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 2 -->
-            <div class="product-card">
-                <div class="card-image-box">
-                    <span class="badge sale-badge">Sale 20%</span>
-                    <div class="card-actions">
-                        <button class="action-btn">♡</button>
-                        <button class="action-btn" onclick="addToCart('Celimax - Retinal Shot', 799)">🛒</button>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=500&q=80" alt="Product">
-                </div>
-                <div class="card-info">
-                    <h3 class="product-title">Celimax - The Vita-A Retinal Shot Tightening Booster 15ml</h3>
-                    <div class="price-box">
-                        <span class="current-price">LE 799</span>
-                        <span class="old-price">LE 1,000</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section: Latest Arrivals -->
-    <section class="products-section">
-        <div class="section-header">
-            <h2>Explore Our Latest Arrivals!</h2>
-            <a href="#" class="show-all">Explore More</a>
-        </div>
-
-        <div class="products-grid">
-            <!-- Product 3 -->
-            <div class="product-card">
-                <div class="card-image-box">
-                    <span class="badge new-badge">New</span>
-                    <div class="card-actions">
-                        <button class="action-btn">♡</button>
-                        <button class="action-btn" onclick="addToCart('FOODOLOGY - Burningology', 950)">🛒</button>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=500&q=80" alt="Product">
-                </div>
-                <div class="card-info">
-                    <h3 class="product-title">FOODOLOGY - Burningology Tea Intensive Plan</h3>
-                    <div class="price-box">
-                        <span class="current-price">LE 950</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Shopping Cart Modal Slide-over -->
-    <div class="cart-drawer" id="cartDrawer">
-        <div class="cart-header">
-            <h3>Your Shopping Cart</h3>
-            <button class="close-cart" onclick="toggleCart()">&times;</button>
-        </div>
-        <div class="cart-items" id="cartItems">
-            <p class="empty-cart-msg">Your cart is currently empty.</p>
-        </div>
-        <div class="cart-footer">
-            <div class="total-row">
-                <span>Total:</span>
-                <span id="total-price">LE 0</span>
-            </div>
-            <button class="checkout-btn" onclick="sendOrderWhatsapp()">Checkout via WhatsApp</button>
-        </div>
+    <div class="site-logo">
+      <a href="#">SKIN.DRINAL</a>
     </div>
 
-    <!-- Floating Chat Widget -->
-    <div class="chat-widget-btn">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="#ffffff"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+    <div class="header-actions">
+      <button class="icon-btn" id="openCartBtn" aria-label="Open Cart">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Navigation Side Drawer -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="nav-drawer" id="navDrawer">
+    <div class="drawer-header">
+      <h2>Menu</h2>
+      <button class="close-btn" id="closeDrawerBtn">&times;</button>
+    </div>
+    <nav class="drawer-nav">
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#products">All Products</a></li>
+        <li><a href="#cleansers">Cleansers</a></li>
+        <li><a href="#serums">Serums & Treatments</a></li>
+        <li><a href="#moisturizers">Moisturizers</a></li>
+        <li><a href="#about">About SkinRx</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-image-container">
+      <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1200&q=80" alt="Skin.Drinal Luxury Lotion" class="hero-img">
+    </div>
+    <div class="hero-content">
+      <span class="hero-subtitle">Pharmacist-Formulated Precision</span>
+      <h1>Clean & Science-Backed Skincare</h1>
+      <a href="#products" class="btn-primary">Shop Collection</a>
+    </div>
+  </section>
+
+  <!-- Product Catalog -->
+  <section class="products-section" id="products">
+    <div class="section-title">
+      <h2>Curated Formulas</h2>
+      <p>Targeted solutions for glowing, healthy skin</p>
     </div>
 
-    <script src="script.js"></script>
+    <div class="product-grid" id="productGrid">
+      <!-- Dynamic Products rendered by script.js -->
+    </div>
+  </section>
+
+  <!-- Cart Side Drawer -->
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="drawer-header">
+      <h2>Your Cart</h2>
+      <button class="close-btn" id="closeCartBtn">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItemsContainer">
+      <p class="empty-cart-msg">Your cart is currently empty.</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>Subtotal:</span>
+        <span id="cartSubtotal">0 EGP</span>
+      </div>
+      <div class="checkout-form">
+        <h3>Customer Details</h3>
+        <input type="text" id="custName" placeholder="Full Name" required>
+        <input type="tel" id="custPhone" placeholder="Phone Number" required>
+        <textarea id="custAddress" placeholder="Delivery Address" rows="2" required></textarea>
+        <button class="btn-checkout" id="whatsappCheckoutBtn">Checkout via WhatsApp 💬</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Skin.Drinal. Formulated with care by Pharmacists.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-  </html>
-  
+    </html>
+
